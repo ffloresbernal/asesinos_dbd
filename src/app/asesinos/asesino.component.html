@@ -14,19 +14,25 @@
 <hr>
 <div class="container">
     <div class="row">
+        <div>
+
+        </div>
+        
         <div *ngFor="let Asesino of asesinos_listado">                
             <div class="card" >
                 <div class="card-header">
                     <h4>NOMBRE: {{Asesino.nombre}}</h4>
-                    <img src="\src\assets\img\{{Asesino.nombre}}.png" style="height: 100px; width: 100px;" />        
                 </div>
                 <div class="card-body">
                     <ul>
+                        <img src="../../assets/img/{{Asesino.nombre}}.png" style="width:100px;height: 100px;"/>        
+                        <!--  -->
                         <li>velocidad de movimiento: {{Asesino.velocidad}}</li>
                         <li>dificultad {{ Asesino.dificultad}} </li>
                     </ul>
                 </div>
             </div>
+            <br />
         </div>
     </div>     
     <hr>   
