@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Reinos - Mapas</h1>
+    <div class="row">
+        <button (click)="MostrarMapasVar('dia')" class="btn btn-primary col-3" style="margin:3px;"> Mapas de dia </button>
+        <button (click)="MostrarMapasVar('noche')" class="btn btn-primary col-3" style="margin:3px;"> Mapas de noche </button>
+        <button (click)="MostrarMapas()" class="btn btn-primary col-3" style="margin:3px;"> Todos los mapas </button>
+    </div >
+    
+    <div class="row">
+        <div *ngFor="let Mapa of listado_mapas" >
+            <div *ngIf="Mapa.visible == true">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="display-3"> {{Mapa.nombreMapa}} </h2>
+                        <img src="../../assets/img/imgMapas/{{Mapa.nombreMapa}}.png" style="width:400px; height:300;" />
+                    </div>
+                    <div class="card-body">
+                        <p>Tipo de mapa: {{Mapa.tipoMapa}}</p>
+                        <p>Cantidad de Ganchos: {{Mapa.cantidadGanchos}}</p>
+                        <p *ngIf="Mapa.dia == true ">El mapa es de día </p>
+                        <p *ngIf="Mapa.dia == false ">El mapa es de noche </p>
+                    </div>
+                </div>
+            </div>
+            <br />
+        </div>
+    </div>
+    
+</div>

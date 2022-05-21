@@ -2,6 +2,7 @@ export class Asesino {
     constructor(
         public nombre:string,
         public velocidad:number,
-        public dificultad:string
+        public dificultad:string,
+        public visible:boolean
     ){}
 }

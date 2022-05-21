@@ -1,0 +1,18 @@
+<hr>
+<div class="container">
+    <h1 class="display-3">Supervivientes -</h1>
+    <div class="row col-md-4" *ngFor="let Survivor of listado_survivor">
+        <div class="card ">
+            <div class="card-header">
+                <h2>{{Survivor.nombre}}</h2>
+                <img src="../../assets/img/imgSurv/{{Survivor.nombre}}.png" style="width: 100px; height: 100px;"/>
+            </div>
+            <div class="card-body">
+                <p>Perks: {{Survivor.perks}}</p>
+                <p>Descripcion: {{Survivor.detalle}} </p>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <br />
+</div>

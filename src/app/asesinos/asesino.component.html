@@ -1,13 +1,15 @@
 <hr>
 <div class="row">
+    <h1 class="display-3">Asesinos -</h1>
+    <hr />
     <div class="col-md-1"></div>
     <div class="col-md-2">
-        <button class="btn btn-primary" >Asesinos Faciles</button>
+        <button (click)="mostrarAsesinosVar('Facil')" class="btn btn-primary" >Asesinos Faciles</button>
     </div>
-    <div class="col-md-2">
+    <div (click)="mostrarAsesinosVar('Dificil')"  class="col-md-2">
         <button class="btn btn-primary" >Asesinos Dificiles</button>
     </div>
-    <div class="col-md-2">
+    <div (click)="mostratTodosAsesinos()" class="col-md-2"> 
         <button class="btn btn-primary" >Todos los asesinos</button>
     </div>
 </div>
@@ -18,20 +20,22 @@
 
         </div>
         
-        <div *ngFor="let Asesino of asesinos_listado">                
-            <div class="card" >
-                <div class="card-header">
-                    <h4>NOMBRE: {{Asesino.nombre}}</h4>
+        <div *ngFor="let Asesino of asesinos_listado">
+            <div *ngIf="Asesino.visible === true">
+                <div class="card" >
+                    <div class="card-header">
+                        <h4>NOMBRE: {{Asesino.nombre}}</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <img src="../../assets/img/{{Asesino.nombre}}.png" style="width:100px;height: 100px;"/>        
+                            <!--  -->
+                            <li>velocidad de movimiento: {{Asesino.velocidad}}</li>
+                            <li>dificultad {{ Asesino.dificultad}} </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <ul>
-                        <img src="../../assets/img/{{Asesino.nombre}}.png" style="width:100px;height: 100px;"/>        
-                        <!--  -->
-                        <li>velocidad de movimiento: {{Asesino.velocidad}}</li>
-                        <li>dificultad {{ Asesino.dificultad}} </li>
-                    </ul>
-                </div>
-            </div>
+            </div>                
             <br />
         </div>
     </div>     
