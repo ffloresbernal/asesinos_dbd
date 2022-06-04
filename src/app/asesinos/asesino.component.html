@@ -28,10 +28,12 @@
                     </div>
                     <div class="card-body">
                         <ul>
-                            <img src="../../assets/img/{{Asesino.nombre}}.png" style="width:100px;height: 100px;"/>        
+                            <img src="../../assets/img/imgAsesinos/{{Asesino.nombre}}.png" style="width:125px;height: 150px;"/>        
                             <!--  -->
                             <li>velocidad de movimiento: {{Asesino.velocidad}}</li>
                             <li>dificultad {{ Asesino.dificultad}} </li>
+                            <hr>
+                            <button class="btn btn-warning" (click)="MostrarPaginaAsesino(Asesino.nombre)"> Mostrar</button>
                         </ul>
                     </div>
                 </div>

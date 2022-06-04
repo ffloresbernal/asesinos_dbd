@@ -1,16 +1,18 @@
 import { ModuleWithProviders } from "@angular/core";
 import {Routes, RouterModule} from "@angular/router";
 
-import { AsesinosComponent } from "./asesinos/asesinos.component";
-import { SurvivorComponent } from "./survivors/survivor.component";
-import { Error404Component } from "./Error/error.component";
-import { MapaComponent } from "./mapas/mapa.component";
+import { AsesinosComponent } from './asesinos/asesinos.component';
+import { SurvivorComponent } from './survivors/survivor.component';
+import { Error404Component } from './Error/error.component';
+import { MapaComponent } from './mapas/mapa.component';
+import { SingleAsesino } from './asesinos/asesino/asesinopage.component';
 
 const appRoutes:Routes =[
         {path:'', component:AsesinosComponent},
         {path:'survivors', component:SurvivorComponent},
         {path:'mapas',component:MapaComponent },
         {path:'asesinos', component:AsesinosComponent},
+        {path:'asesinos/:nombre', component:SingleAsesino},
         //{path}    
         {path:'**', component: Error404Component},
 ];

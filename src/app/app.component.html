@@ -3,12 +3,18 @@
   
 </head>
 <body>
-  <ul>
-    <li><a href="/survivors"> Supervivientes</a></li>
-    <li><a href="/asesinos"> Asesinos</a></li>
-    <li><a href="/mapas"> Mapas</a></li>
-  </ul>
-  <h1>Dead by Daylight - PC Game</h1>
+  <div>
+    <h1>Dead by Daylight - PC Game</h1>
+  </div>
+  <nav>
+    <ul class="nav-prin">
+      <li><a [routerLink]="['/survivors']" routerLinkActive="active" > Supervivientes</a></li>
+      <li><a [routerLink]="['/asesinos']" routerLinkActive="active" > Asesinos</a></li>
+      <li><a [routerLink]="['/mapas']" routerLinkActive="active"> Mapas</a></li>
+    </ul>
+  </nav>
+  
+  
   <router-outlet>
   </router-outlet>
   <hr>

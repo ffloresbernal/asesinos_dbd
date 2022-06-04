@@ -11,6 +11,7 @@ import { AsesinosComponent } from './asesinos/asesinos.component';
 import { SurvivorComponent } from './survivors/survivor.component';
 import { Error404Component } from './Error/error.component';
 import { MapaComponent } from './mapas/mapa.component';
+import { SingleAsesino } from './asesinos/asesino/asesinopage.component';
 
 // bootstrap
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,7 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SurvivorComponent,
     Error404Component,
     MapaComponent,
-    
+    SingleAsesino    
   ],
 
   imports: [

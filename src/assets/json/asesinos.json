@@ -1,0 +1,50 @@
+[
+  {
+    "nombre": "Freddy",
+    "velocidad": 4.8,
+    "dificultad": "Dificil",
+    "visible": true
+  },
+  {
+    "nombre": "Doctor",
+    "velocidad": 4.8,
+    "dificultad": "Dificil",
+    "visible": true
+  },
+  {
+    "nombre": "Legion",
+    "velocidad": 4.6,
+    "dificultad": "Facil",
+    "visible": true
+  },
+  {
+    "nombre": "Enfermera",
+    "velocidad": 3.8,
+    "dificultad": "Dificil",
+    "visible": true
+  },
+  {
+    "nombre": "Plaga",
+    "velocidad": 4.6,
+    "dificultad": "Dificil",
+    "visible": true
+  },
+  {
+    "nombre": "Trampero",
+    "velocidad": 4.8,
+    "dificultad": "Facil",
+    "visible": true
+  },
+  {
+    "nombre": "Espiritu",
+    "velocidad": 4.4,
+    "dificultad": "Dificil",
+    "visible": true
+  },
+  {
+    "nombre": "Canibal",
+    "velocidad": 4.6,
+    "dificultad": "Facil",
+    "visible": true
+  }
+]

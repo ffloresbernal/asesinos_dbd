@@ -1,7 +1,29 @@
 a{
-    color:#008000;
+    color:#aeaeae;
     text-decoration: none;
 }
 a:hover{
-    color:#00800071;
+    color:#29292971;
+}
+nav{
+    background: #300800;
+}
+.nav-prin{
+    margin: 0;
+    padding: 0;
+    padding:30px;
+    list-style-type: none;
+}
+.nav-prin li {
+    display: inline;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: 200ms;
+}
+.nav-prin li:hover {
+    font-size: 18px;
+}
+.active{
+    font-size: 18px;
+    
 }

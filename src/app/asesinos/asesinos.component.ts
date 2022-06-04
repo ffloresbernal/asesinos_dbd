@@ -1,5 +1,7 @@
 import { Component } from "@angular/core";
 import { Asesino } from "./asesino";
+import { Navigation,Router } from '@angular/router'
+import  asesinos  from '../../assets/json/asesinos.json';
 
 @Component ({
     selector:'Asesino',
@@ -8,16 +10,9 @@ import { Asesino } from "./asesino";
 })
 export class AsesinosComponent {
     public asesinos_listado:Array<Asesino>;
-    
-    constructor(){
-        this.asesinos_listado = [
-            new Asesino ('Trampero', 4.8, 'Facil',true),
-            new Asesino ('Enfermera', 3.8, 'Dificil',true),
-            new Asesino ('Espiritu', 4.4, 'Dificil',true),
-            new Asesino ('Legion', 4.6, 'Facil',true),
-            new Asesino ('Freddy',4.8,'Medio',true),
-            new Asesino ('Plaga',4.6,'Dificil',true),
-        ]
+
+    constructor( private _router : Router){
+        this.asesinos_listado = asesinos;
     }
     
     mostrarAsesinosVar(valor:string){
@@ -36,6 +31,8 @@ export class AsesinosComponent {
             this.asesinos_listado[i].visible = true;
         }
     }
-
+    MostrarPaginaAsesino(assesin:string){
+        this._router.navigate(['/asesinos/',assesin])
+    }
 
 }
