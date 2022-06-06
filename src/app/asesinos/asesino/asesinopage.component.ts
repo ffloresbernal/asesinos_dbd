@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Asesino } from '../asesino';
 import { Router,ActivatedRoute ,Params } from '@angular/router';
-
+import  asesinos  from '../../../assets/json/asesinos.json';
 
 @Component({
     selector:'SingleAsesino',
@@ -16,24 +16,30 @@ export class SingleAsesino {
         dificultad: "",
         visisble:""
     };
+    public url404=false;
 
     constructor(
         private _route:ActivatedRoute,
+        private _router:Router
     ){
-        this.asesinos_listado = [
-            new Asesino ('Trampero', 4.8, 'Facil',true),
-            new Asesino ('Enfermera', 3.8, 'Dificil',true),
-            new Asesino ('Espiritu', 4.4, 'Dificil',true),
-            new Asesino ('Legion', 4.6, 'Facil',true),
-            new Asesino ('Freddy',4.8,'Medio',true),
-            new Asesino ('Plaga',4.6,'Dificil',true),
-        ]
+        this.asesinos_listado = asesinos;
+
     }
 
     ngOnInit(){
         this._route.params.forEach((params : Params) =>{
             this.assesin.nombre = params['nombre'];
         })
+
+        if(this.asesinos_listado.find( Asesino => Asesino.nombre === this.assesin.nombre) ){
+            this.url404 = true;
+        }else{
+            this.url404 = false;
+        }
+    }
+
+    VolverAsesinos(){
+        this._router.navigate(['/asesinos']);
     }
 
 

@@ -1,6 +1,6 @@
-<div>
+<div >
     <div *ngFor="let Asesino of asesinos_listado">
-        <div *ngIf="Asesino.nombre == assesin.nombre" >
+        <div *ngIf="Asesino.nombre == assesin.nombre">
             <div class="container">
                 <div class="card">
                     <div class="card-header">
@@ -17,6 +17,8 @@
                                     <p>Nombre : {{Asesino.nombre}}</p>
                                     <p>Velocidad: {{Asesino.velocidad}} </p>
                                     <p>Dificultad: {{Asesino.dificultad}}</p>
+                                    <hr>
+                                    <button class="btn btn-secondary" (click)="VolverAsesinos()" >Volver</button>
                                 </div>
                             </div>
                         </div>
@@ -24,5 +26,8 @@
                 </div>                
             </div>
         </div>
+    </div>
+    <div *ngIf="url404==false">
+        <h1>Asesino {{assesin.nombre}} no encontrado</h1>
     </div>
 </div>
