@@ -1,0 +1,13 @@
+<h1>Estamos en componente API </h1>
+<p>
+    mira el console.log!    
+</p>
+
+<div *ngIf="camaradas ; else NoSomosCamaradas">
+    <h5>Somos camaradas</h5>
+    <button (click)="cambiarCamarada(true)" >Romper Amistad</button>
+</div>
+<ng-template #NoSomosCamaradas>
+    <h5>No somos Camaradas</h5>
+    <button (click)="cambiarCamarada(false)" >Volver a ser amigos</button>
+</ng-template>
